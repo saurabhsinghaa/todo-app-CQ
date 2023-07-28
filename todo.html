@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Task Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            background-color: rgb(230, 194, 170);
+        }
+
+        #left_pane {
+            flex: 1;
+            padding: 50px;
+            border-right: 1px solid #ccc;
+        }
+
+        #right_pane {
+            flex: 2;
+            padding: 50px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .task-form {
+            display: none;
+        }
+
+        .active-form {
+            display: block;
+        }
+
+        input[type="checkbox"]:checked+label {
+            text-decoration: line-through;
+            color: grey;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="left_pane">
+        <h2>TASKS LIST</h2>
+        <div id="parent"></div>
+    </div>
+    <div id="right_pane">
+        <div class="task-form active-form">
+            <h2>CREATE NEW TASK</h2>
+            <input type="text" placeholder="Enter Task" id="inp" />
+            <button id="btn">ADD</button>
+        </div>
+    </div>
+    <script src="/todoScript.js"></script>!
+</body>
+
+</html>
